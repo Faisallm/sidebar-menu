@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    /* default settings for all websites */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.header {
+    /* 100% */
+    width: 100%;
+    /* 100% viewport height */
+    height: 100vh;
+    background-image: url(images/background.png);
+    /* sets the initial position
+    for a background image */
+    background-position: center;
+    /*  */
+    background-size: cover;
+}
+
+.side-nav {
+    width: 110px;
+    /* border: 2px solid black; */
+    height: 100%;
+    /* positioned relative to the viewport.
+    it always stays in the same place
+    even if the page is scrolled */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    /* applying blur effects to an
+    element's behind */
+    backdrop-filter: blur(5px);
+    display: flex;
+    /* push the flex-children
+    further apart from each other */
+    justify-content: space-between;
+    flex-direction: column;
+    transition: all 0.5s;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    /* so as to center the user div element */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.user div {
+    display: none;
+}
+
+.user h2 {
+    font-size: 15px;
+    font-weight: 600;
+    /* don't wrap it unto multiple
+    lines even when we are out of space */
+    /* this is also a new one for me */
+    white-space: nowrap;
+}
+
+.user-img {
+    width: 40px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.star-img {
+    width: 20px;
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 15px;
+}
+
+ul li {
+    margin: 30px 0;
+    /* default flex-direction is horizontal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+ul li img {
+    width: 30px;
+    margin-right: 0px;
+}
+
+ul li p {
+    /* don't wrap the elements of the p
+    elements unto multiple lines in the absence of space */
+    white-space: nowrap;
+    /* hide the texts */
+    display: none;
+}
+
+.side-nav:hover {
+    width: 250px;
+}
+
+.side-nav:hover .user div {
+    display: block;
+}
+
+.side-nav:hover .user {
+    width: 100%;
+    /* background ontop another background */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.side-nav:hover .star-img {
+    display: block;
+}
+
+.side-nav:hover .user-img {
+    margin: 0;
+}
+
+.side-nav:hover ul li p {
+    display: block;
+}
+
+.side-nav:hover ul li img {
+    margin-right: 10px;
+}
+
+.side-nav:hover ul li {
+    justify-content: flex-start;
+}
